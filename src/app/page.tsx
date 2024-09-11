@@ -4,7 +4,6 @@ import {useMst} from "@/app/mst";
 import {observer} from "mobx-react-lite";
 import {useEffect} from "react";
 
-
 const Home = observer(() => {
     const rootStore = useMst();
 
@@ -19,7 +18,7 @@ const Home = observer(() => {
             <h1>{rootStore.users.length}</h1>
             {rootStore.users.map(user => {
                 return (
-                    <div key={user.name}> {/* Add key to avoid warning */}
+                    <div key={user.name}>
                         <h1>{user.name} - {user.age}</h1>
                     </div>
                 )
